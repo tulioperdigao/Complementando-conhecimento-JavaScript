@@ -43,4 +43,4 @@ const funcao3a = fn3()  //propriedades de função
 const funcao3b = fn3()  //propriedades de função
 
 funcao3()
-console.log(fn3.count)
+console.log(fn3.count)  //propriedades de função
