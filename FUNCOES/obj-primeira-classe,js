@@ -1,0 +1,46 @@
+//Função como Parâmetro
+function fn(cb) {
+    console.log('executar ação de callback')
+    console.log(typeof cb)
+    cb()
+}
+
+function callback() {
+    console.log('função passada por parâmetro')
+}
+
+fn(callback)
+
+
+//Atribuindo como propriedade de outro objeto.
+const obj = {
+    callback
+}
+obj.callback()
+
+//Retornar como resultado de outra função
+function fn2(n1) {
+    return function(n2) {
+        return n1 * n2
+    }
+}
+
+const funcao2 = fn2(10)
+const mult = funcao2(2)
+console.log(mult)
+
+function fn3() {
+    fn3.count++         //propriedades de função
+    return function _fn3() {
+        console.log("função retornada como resultado de outra")
+    }
+}
+
+fn3.count = 0           //propriedades de função
+
+const funcao3 = fn3()   //propriedades de função
+const funcao3a = fn3()  //propriedades de função
+const funcao3b = fn3()  //propriedades de função
+
+funcao3()
+console.log(fn3.count)
