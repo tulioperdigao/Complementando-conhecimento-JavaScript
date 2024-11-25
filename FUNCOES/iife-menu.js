@@ -6,8 +6,8 @@
 // init()
 
 (function (win, doc) {
+    "use strict"
 
-    win.alert('Olá Mundo!')
     let isValid = false
     console.log('init menu', isValid)
 
