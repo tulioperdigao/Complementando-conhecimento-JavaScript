@@ -5,7 +5,9 @@
 // }
 // init()
 
-(function () {
+(function (win, doc) {
+
+    win.alert('Olá Mundo!')
     let isValid = false
     console.log('init menu', isValid)
 
@@ -13,4 +15,4 @@
         console.log('init do menu')
     } 
     init()
-}) ()
+}) (window, document)
